@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morse.Android", "Morse\Morse.Android\Morse.Android.csproj", "{BBDC2E7B-3FBF-466B-A6EC-50D67426C864}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morse", "Morse\Morse\Morse.csproj", "{FC3875B9-9839-43F9-8048-9596907CBDD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBDC2E7B-3FBF-466B-A6EC-50D67426C864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBDC2E7B-3FBF-466B-A6EC-50D67426C864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBDC2E7B-3FBF-466B-A6EC-50D67426C864}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BBDC2E7B-3FBF-466B-A6EC-50D67426C864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBDC2E7B-3FBF-466B-A6EC-50D67426C864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBDC2E7B-3FBF-466B-A6EC-50D67426C864}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FC3875B9-9839-43F9-8048-9596907CBDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC3875B9-9839-43F9-8048-9596907CBDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC3875B9-9839-43F9-8048-9596907CBDD3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FC3875B9-9839-43F9-8048-9596907CBDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC3875B9-9839-43F9-8048-9596907CBDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC3875B9-9839-43F9-8048-9596907CBDD3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6CF6D84-938A-466D-9FA2-5813DD92EC98}
+	EndGlobalSection
+EndGlobal
