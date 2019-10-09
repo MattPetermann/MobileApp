@@ -7,15 +7,49 @@
              x:Class="Personality.MainPage">
 
     <StackLayout>
+        <Label Text="Name:"
+               FontSize="48"
+               HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="NameEntry"
+               BackgroundColor="LightSlateGray"/>
+        <Label x:Name="AgeLabel"
+               Text="{Binding Source={x:Reference AgeSlider}, Path=Value, StringFormat='Age: {0:F0}'}"
+               FontSize="48"
+               HorizontalOptions="CenterAndExpand" />
         <Slider x:Name="AgeSlider"
                 Minimum="0"
                 Maximum="99"
-                HorizontalOptions="Center"/>
-        <Label x:Name="AgeLabel"
-               Text="{Binding Source={x:Reference AgeSlider}, Path=Value, StringFormat='{0:F0}'}"
+                MinimumTrackColor="DarkSlateGray"
+                MaximumTrackColor="LightSlateGray" />
+
+        <Label Text="Favorite Color:"
                FontSize="48"
-               HorizontalOptions="Center"/>
-
+               HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="ColorEntry"
+               BackgroundColor="LightSlateGray"/>
+        
+        <Label Text="First Car:"
+               FontSize="48"
+               HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="CarEntry"
+               BackgroundColor="LightSlateGray"/>
+        
+        <Label Text="Current Pet:"
+               FontSize="48"
+               HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="PetEntry"
+               BackgroundColor="LightSlateGray"/>
+        
+        <Label Text="Country:"
+               FontSize="48"
+               HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="CountryEntry"
+               BackgroundColor="LightSlateGray"/>
+        
+        <Label Text="Latest Vacation:"
+               FontSize="48"
+               HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="VacationEntry"
+               BackgroundColor="LightSlateGray"/>
     </StackLayout>
-
 </ContentPage>
