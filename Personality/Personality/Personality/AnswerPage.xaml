@@ -7,7 +7,7 @@
              x:Class="Personality.AnswerPage">
 
     <StackLayout>
-        <Label x:Name="AgeLabel" 
+        <Label x:Name="AnswerLabel" 
                FontSize="48" />
     </StackLayout>
 </ContentPage>
