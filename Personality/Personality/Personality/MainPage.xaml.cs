@@ -11,5 +11,10 @@ namespace Personality
         {
             InitializeComponent();
         }
+
+        private async void OpenResult(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AnswerPage((int)Math.Floor(AgeSlider.Value)));
+        }
     }
 }
