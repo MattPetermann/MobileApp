@@ -6,16 +6,18 @@
              mc:Ignorable="d"
              x:Class="Personality.MainPage">
     <StackLayout BackgroundColor="DarkSlateGray">
-        <Label Text="Question One" FontSize="48" TextColor="WhiteSmoke" />
-        <BoxView BackgroundColor="WhiteSmoke"
+        <Label Text="Potions?" FontSize="48" TextColor="WhiteSmoke" />
+        <ContentView BackgroundColor="WhiteSmoke"
                  HeightRequest="320"
                  WidthRequest="320"
                  HorizontalOptions="Center"
                  VerticalOptions="CenterAndExpand">
-            <BoxView.GestureRecognizers>
+            <ContentView.GestureRecognizers>
                 <SwipeGestureRecognizer Direction="Left" Swiped="Left" />
                 <SwipeGestureRecognizer Direction="Right" Swiped="Right" />
-            </BoxView.GestureRecognizers>
-        </BoxView>
+            </ContentView.GestureRecognizers>
+            <Image Aspect="AspectFit"
+                   Source="potion.jpg" />
+        </ContentView>
     </StackLayout>
 </ContentPage>
