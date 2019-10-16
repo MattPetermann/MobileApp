@@ -5,10 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Personality.AnswerPage">
-
     <StackLayout BackgroundColor="DarkSlateGray">
-        <Label x:Name="AnswerLabel" 
-               TextColor="WhiteSmoke"
-               FontSize="48" />
+        <Label Text="Answer" FontSize="48" TextColor="WhiteSmoke" />
     </StackLayout>
 </ContentPage>

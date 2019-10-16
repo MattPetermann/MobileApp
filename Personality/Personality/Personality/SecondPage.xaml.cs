@@ -2,21 +2,21 @@
 
 namespace Personality
 {
-    public partial class MainPage : IQuestionPage
+    public partial class SecondPage : IQuestionPage
     {
-        public MainPage()
+        public SecondPage()
         {
             InitializeComponent();
         }
 
         public async void Left(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SecondPage());
+            await Navigation.PushAsync(new ThirdPage());
         }
 
         public async void Right(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SecondPage());
+            await Navigation.PushAsync(new ThirdPage());
         }
     }
 }

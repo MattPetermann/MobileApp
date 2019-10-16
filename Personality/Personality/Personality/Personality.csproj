@@ -18,5 +18,11 @@
     <Compile Update="AnswerPage.xaml.cs">
       <DependentUpon>AnswerPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="ThirdPage.xaml.cs">
+      <DependentUpon>ThirdPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="SecondPage.xaml.cs">
+      <DependentUpon>SecondPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

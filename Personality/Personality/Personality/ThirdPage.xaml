@@ -4,9 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Personality.MainPage">
+             x:Class="Personality.ThirdPage">
     <StackLayout BackgroundColor="DarkSlateGray">
-        <Label Text="Question One" FontSize="48" TextColor="WhiteSmoke" />
+        <Label Text="Question Three" FontSize="48" TextColor="WhiteSmoke" />
         <BoxView BackgroundColor="WhiteSmoke"
                  HeightRequest="320"
                  WidthRequest="320"
