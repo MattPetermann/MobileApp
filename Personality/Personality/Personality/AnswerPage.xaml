@@ -6,6 +6,6 @@
              mc:Ignorable="d"
              x:Class="Personality.AnswerPage">
     <StackLayout BackgroundColor="DarkSlateGray">
-        <Label Text="Answer" FontSize="48" TextColor="WhiteSmoke" />
+        <Label x:Name="Answer" FontSize="48" TextColor="WhiteSmoke" />
     </StackLayout>
 </ContentPage>
