@@ -5,13 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Personality.ThirdPage">
-    <StackLayout BackgroundColor="DarkSlateGray">
-        <Label Text="Fortunes?" FontSize="48" TextColor="WhiteSmoke" />
-        <ContentView BackgroundColor="WhiteSmoke"
-                     HeightRequest="320"
+    <StackLayout BackgroundColor="#34495e">
+        <Label Text="Potions?" 
+               FontSize="48" 
+               TextColor="White"
+               HorizontalOptions="CenterAndExpand"/>
+        <ContentView HeightRequest="320"
                      WidthRequest="320"
-                     HorizontalOptions="Center"
-                     VerticalOptions="CenterAndExpand">
+                     HorizontalOptions="Center">
             <ContentView.GestureRecognizers>
                 <SwipeGestureRecognizer Direction="Left" Swiped="Left" />
                 <SwipeGestureRecognizer Direction="Right" Swiped="Right" />
@@ -19,5 +20,16 @@
             <Image Aspect="AspectFit"
                    Source="crystal.jpg" />
         </ContentView>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="CenterAndExpand">
+            <Button Text="Dislike"
+                    BackgroundColor="#e74c3c"
+                    TextColor="White"
+                    Clicked="Left"/>
+            <Button Text="Like"
+                    BackgroundColor="#2ecc71"
+                    TextColor="White"
+                    Clicked="Right"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
