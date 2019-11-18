@@ -18,7 +18,7 @@
                 <SwipeGestureRecognizer Direction="Right" Swiped="Right" />
             </ContentView.GestureRecognizers>
             <Image Aspect="AspectFit"
-                   Source="spells.jpg" />
+                   Source="science.png" />
         </ContentView>
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="CenterAndExpand">

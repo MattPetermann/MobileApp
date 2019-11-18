@@ -2,8 +2,8 @@
 {
     public class Answers
     {
-        public static bool Potions { get; set; }
-        public static bool Spells { get; set; }
-        public static bool Fortunes { get; set; }
+        public static bool Strength { get; set; }
+        public static bool Science { get; set; }
+        public static bool Gymnastics { get; set; }
     }
 }

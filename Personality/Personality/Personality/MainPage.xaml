@@ -18,7 +18,7 @@
                 <SwipeGestureRecognizer Direction="Right" Swiped="Right" />
             </ContentView.GestureRecognizers>
             <Image Aspect="AspectFit"
-                   Source="potion.jpg"/>
+                   Source="strength.png"/>
         </ContentView>
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="CenterAndExpand">

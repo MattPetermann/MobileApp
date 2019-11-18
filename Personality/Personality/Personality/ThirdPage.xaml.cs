@@ -11,13 +11,13 @@ namespace Personality
 
         public async void Left(object sender, EventArgs e)
         {
-            Answers.Fortunes = false;
+            Answers.Gymnastics = false;
             await Navigation.PushAsync(new AnswerPage());
         }
 
         public async void Right(object sender, EventArgs e)
         {
-            Answers.Fortunes = true;
+            Answers.Gymnastics = true;
             await Navigation.PushAsync(new AnswerPage());
         }
     }
