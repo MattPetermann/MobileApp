@@ -27,49 +27,52 @@ namespace Final.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            var name = NameEntry.GetValue(Entry.TextProperty).ToString();
-            var capital = "";
-            var region = "";
-            var subRegion = "";
-            var population = -1;
-
-            //Make API call to get other properties
-            var requestMessage = new HttpRequestMessage(HttpMethod.Get, "https://restcountries-v1.p.rapidapi.com/name/" + name);
-            requestMessage.Headers.Add("X-RapidAPI-Key", "72794103f3msh9286887e36e342cp123283jsn367004de6ea2");
-            var response = await HttpClient.SendAsync(requestMessage);
-            if (response.IsSuccessStatusCode)
+            var name = "";
+            try
             {
-                var data = await response.Content.ReadAsStringAsync();
-                data = data.Trim('[');
-                data = data.Trim(']');
-                var idx = data.IndexOf("},{", StringComparison.Ordinal);
-                if (idx != -1)
-                {
-                    data = data.Substring(0, idx + 1);
-                }
-
-                //Serialize the json
-                var json = JObject.Parse(data);
-                var dictionary = json.ToObject<Dictionary<string, object>>();
-
-                //Get the values
-                name = dictionary["name"].ToString();
-                capital = dictionary["capital"].ToString();
-                region = dictionary["region"].ToString();
-                subRegion = dictionary["subregion"].ToString();
-                population = int.Parse(dictionary["population"].ToString());
+                name = NameEntry.GetValue(Entry.TextProperty).ToString();
+            } 
+            catch (Exception)
+            {
+                //Ignored
             }
 
-            Country = new Country
+            if (name != "")
             {
-                Name = name,
-                Capital = capital,
-                Region = region,
-                SubRegion = subRegion,
-                Population = population
-            };
+                //Make API call to get other properties
+                var requestMessage = new HttpRequestMessage(HttpMethod.Get,
+                    "https://restcountries-v1.p.rapidapi.com/name/" + name);
+                requestMessage.Headers.Add("X-RapidAPI-Key", "72794103f3msh9286887e36e342cp123283jsn367004de6ea2");
+                var response = await HttpClient.SendAsync(requestMessage);
+                if (response.IsSuccessStatusCode)
+                {
+                    var data = await response.Content.ReadAsStringAsync();
+                    data = data.Trim('[');
+                    data = data.Trim(']');
+                    var idx = data.IndexOf("},{", StringComparison.Ordinal);
+                    if (idx != -1)
+                    {
+                        data = data.Substring(0, idx + 1);
+                    }
 
-            MessagingCenter.Send(this, "AddItem", Country);
+                    //Serialize the json
+                    var json = JObject.Parse(data);
+                    var dictionary = json.ToObject<Dictionary<string, object>>();
+
+                    //Get the values
+                    Country = new Country
+                    {
+                        Name = dictionary["name"].ToString(),
+                        Capital = dictionary["capital"].ToString(),
+                        Region = dictionary["region"].ToString(),
+                        SubRegion = dictionary["subregion"].ToString(),
+                        Population = int.Parse(dictionary["population"].ToString())
+                    };
+
+                    MessagingCenter.Send(this, "AddItem", Country);
+                }
+            }
+
             await Navigation.PopModalAsync();
         }
 
