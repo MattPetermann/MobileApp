@@ -5,16 +5,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Final.App">
-
     <Application.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary x:Name="ResourceDictionary">
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="ThemeResources/DefaultTheme.xaml"></ResourceDictionary>
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
             <!--Global Styles-->
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style TargetType="TabbedPage">
+                <Setter Property="SelectedTabColor" Value="{DynamicResource Primary}" />
+                <Setter Property="UnselectedTabColor" Value="{DynamicResource Primary}" />
+            </Style>
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource Primary}" />
+                <Setter Property="BarTextColor" Value="{DynamicResource LightTextColor}" />
+            </Style>
+            <Style TargetType="Switch">
+                <Setter Property="ThumbColor" Value="{DynamicResource Primary}" />
+                <Setter Property="OnColor" Value="{DynamicResource Accent}" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
-    
 </Application>

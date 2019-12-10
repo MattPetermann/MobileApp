@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Final.Services;
@@ -15,6 +17,13 @@ namespace Final
 
             DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();
+        }
+
+        public void ChangeTheme(bool highContrast)
+        {
+            var themeUri = "ThemeResources/" + (highContrast ? "HighContrastTheme" : "DefaultTheme") + ".xaml";
+            var source = new Uri(themeUri, UriKind.Relative);
+            ResourceDictionary.SetAndLoadSource(source, themeUri, this.GetType().GetTypeInfo().Assembly, null);
         }
 
         protected override void OnStart()
