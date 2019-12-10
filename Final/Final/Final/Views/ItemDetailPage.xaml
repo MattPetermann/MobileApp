@@ -71,7 +71,7 @@
             <Label Text="Population:" 
                    FontSize="Medium"
                    HorizontalOptions="Start" />
-            <Label Text="{Binding Country.Population}" 
+            <Label Text="{Binding Country.FormattedPopulation}"
                    d:Text="Population" 
                    FontSize="Medium"
                    FontAttributes="Bold"

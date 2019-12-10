@@ -7,5 +7,6 @@
         public string Region { get; set; }
         public string SubRegion { get; set; }
         public int Population { get; set; }
+        public string FormattedPopulation => $"{Population:0,0}";
     }
 }
