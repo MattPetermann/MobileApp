@@ -10,7 +10,7 @@
     <ContentPage.BindingContext>
         <vm:SettingsViewModel />
     </ContentPage.BindingContext>
-    <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
         <ListView x:Name="SettingsListView"
                   ItemsSource="{Binding SettingsList}"
                   VerticalOptions="FillAndExpand">
