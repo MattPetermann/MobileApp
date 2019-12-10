@@ -42,7 +42,7 @@ namespace Final.ViewModels
             {
                 Countries.Clear();
                 var items = App.Database.GetCountries();
-                foreach (var item in items.Result)
+                foreach (var item in items.Result.OrderBy(c => c.Name))
                 {
                     Countries.Add(item);
                 }
