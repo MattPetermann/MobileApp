@@ -8,6 +8,14 @@
              Title="{Binding Title}">
     <StackLayout Spacing="20" Padding="15">
         <Label Text="Name:" FontSize="Medium" />
-        <Label Text="{Binding Country.Name}" d:Text="Country name" FontSize="Small"/>
+        <Label Text="{Binding Country.Name}" d:Text="Name" FontSize="Small"/>
+        <Label Text="Capital:" FontSize="Medium" />
+        <Label Text="{Binding Country.Capital}" d:Text="Capital" FontSize="Small"/>
+        <Label Text="Region:" FontSize="Medium" />
+        <Label Text="{Binding Country.Region}" d:Text="Region" FontSize="Small"/>
+        <Label Text="Sub-Region:" FontSize="Medium" />
+        <Label Text="{Binding Country.SubRegion}" d:Text="SubRegion" FontSize="Small"/>
+        <Label Text="Population:" FontSize="Medium" />
+        <Label Text="{Binding Country.Population}" d:Text="Population" FontSize="Small"/>
     </StackLayout>
 </ContentPage>
