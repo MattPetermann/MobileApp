@@ -15,7 +15,7 @@ namespace Final
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            DependencyService.Register<MockCountryStore>();
             MainPage = new MainPage();
         }
 

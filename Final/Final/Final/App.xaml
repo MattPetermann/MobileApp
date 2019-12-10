@@ -15,17 +15,9 @@
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
             <!--Global Styles-->
-            <Style TargetType="TabbedPage">
-                <Setter Property="SelectedTabColor" Value="{DynamicResource Primary}" />
-                <Setter Property="UnselectedTabColor" Value="{DynamicResource Primary}" />
-            </Style>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{DynamicResource Primary}" />
                 <Setter Property="BarTextColor" Value="{DynamicResource LightTextColor}" />
-            </Style>
-            <Style TargetType="Switch">
-                <Setter Property="ThumbColor" Value="{DynamicResource Primary}" />
-                <Setter Property="OnColor" Value="{DynamicResource Accent}" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

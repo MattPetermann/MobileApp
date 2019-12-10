@@ -26,10 +26,9 @@ namespace Final.Views
         {
             InitializeComponent();
 
-            var item = new Item
+            var item = new Country
             {
-                Text = "Item 1",
-                Description = "This is an item description."
+                Name = ""
             };
 
             viewModel = new ItemDetailViewModel(item);

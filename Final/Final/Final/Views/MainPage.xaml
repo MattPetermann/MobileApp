@@ -5,7 +5,9 @@
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             mc:Ignorable="d"
             xmlns:views="clr-namespace:Final.Views"
-            x:Class="Final.Views.MainPage">
+            x:Class="Final.Views.MainPage"
+            BarBackgroundColor="{DynamicResource Primary}"
+            BarTextColor="{DynamicResource LightTextColor}">
     <NavigationPage Title="Browse">
         <x:Arguments>
             <views:ItemsPage />

@@ -29,7 +29,7 @@ namespace Final.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
+            var item = args.SelectedItem as Country;
             if (item == null)
                 return;
 
@@ -48,7 +48,7 @@ namespace Final.Views
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
+            if (viewModel.Countries.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
         }
     }

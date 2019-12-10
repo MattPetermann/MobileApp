@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
 using Final.Models;
 
 namespace Final.Views
@@ -13,24 +10,22 @@ namespace Final.Views
     [DesignTimeVisible(false)]
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public Country Country { get; set; }
 
         public NewItemPage()
         {
             InitializeComponent();
-
-            Item = new Item
-            {
-                Text = "Item name",
-                Description = "This is an item description."
-            };
 
             BindingContext = this;
         }
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddItem", Item);
+            Country = new Country
+            {
+                Name = NameEntry.GetValue(Entry.TextProperty).ToString()
+            };
+            MessagingCenter.Send(this, "AddItem", Country);
             await Navigation.PopModalAsync();
         }
 

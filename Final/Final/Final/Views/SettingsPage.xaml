@@ -7,11 +7,9 @@
              x:Class="Final.Views.SettingsPage"
              xmlns:vm="clr-namespace:Final.ViewModels"
              Title="{Binding Title}">
-    
     <ContentPage.BindingContext>
         <vm:SettingsViewModel />
     </ContentPage.BindingContext>
-
     <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
         <ListView x:Name="SettingsListView"
                   ItemsSource="{Binding SettingsList}"
@@ -32,8 +30,8 @@
                                    HorizontalOptions="Start" />
                             <Switch x:Name="{Binding Identifier}"
                                     HorizontalOptions="End"
-                                    ThumbColor="{StaticResource Accent}"
-                                    OnColor="{StaticResource Primary}"
+                                    ThumbColor="{DynamicResource Accent}"
+                                    OnColor="{DynamicResource Primary}"
                                     Toggled="OnToggled" />
                         </Grid>
                     </ViewCell>

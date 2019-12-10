@@ -1,16 +1,14 @@
-﻿using System;
-
-using Final.Models;
+﻿using Final.Models;
 
 namespace Final.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {
-        public Item Item { get; set; }
-        public ItemDetailViewModel(Item item = null)
+        public Country Country { get; set; }
+        public ItemDetailViewModel(Country country = null)
         {
-            Title = item?.Text;
-            Item = item;
+            Title = country?.Name;
+            Country = country;
         }
     }
 }
