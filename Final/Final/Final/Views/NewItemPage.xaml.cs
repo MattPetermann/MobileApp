@@ -42,6 +42,11 @@ namespace Final.Views
                 var data = await response.Content.ReadAsStringAsync();
                 data = data.Trim('[');
                 data = data.Trim(']');
+                var idx = data.IndexOf("},{", StringComparison.Ordinal);
+                if (idx != -1)
+                {
+                    data = data.Substring(0, idx + 1);
+                }
 
                 //Serialize the json
                 var json = JObject.Parse(data);
