@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -26,7 +27,7 @@ namespace Final.ViewModels
             {
                 var newItem = item as Country;
                 Countries.Add(newItem);
-                MockCountryStore.AddCountry(newItem);
+                App.Database.AddCountry(newItem);
             });
         }
 
@@ -40,8 +41,8 @@ namespace Final.ViewModels
             try
             {
                 Countries.Clear();
-                var items = MockCountryStore.Countries;
-                foreach (var item in items)
+                var items = App.Database.GetCountries();
+                foreach (var item in items.Result)
                 {
                     Countries.Add(item);
                 }
